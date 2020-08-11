@@ -1,0 +1,24 @@
+ul.list, ol.list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    max-width: 900px;
+    width: 100%;
+}
+  
+ul.list li, ol.list li {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 0px;
+    border: 1px solid #efefef;
+    font-size: bold;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+ul.list li:hover, ol.list li:hover {
+   background-color: #c3c3c3;
+}
+
+
