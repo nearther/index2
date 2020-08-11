@@ -2,99 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Dream</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/list.css" type="text/css">
     <style>
-        body{
-            overflow-x: hidden;
-        }
         #firstbackground{      /*첫 번째 배경화면*/
-            text-align: left;
             background-image: url('images/1.png');
-            width: 1550;
-            height: 800px;
         }
         #secondbackground{      /*두 번째 배경화면*/
-            text-align: left;
             background-image: url('images/2.png');
-            width: 1550;;            
-            height: 800px;
         }
         #thirdbackground{      /*세 번째 배경화면*/
-            text-align: left;
             background-image: url('images/3.jpg');
-            width: 1550;
-            height: 800px;
         }
         #fourthbackground{      /*네 번째 배경화면*/
-            text-align: left;
             background-image: url('images/4.jpg');
-            width: 1550;
-            height: 800px;
         }
         #fifthbackground{      /*다섯 번째 배경화면*/
-            text-align: left;
             background-image: url('images/5.jpg');
-            width: 1550;
-            height: 800px;
-        }
-
-        .title{                 /*모든 배경화면에 적용되는 제목 및 내용*/
-            color: white;
-            position: relative;
-            top: 150px;
-            left: 70px;
-        }
-        .title p{               /*firstbackground p의 글씨체 조정*/
-            background-color: black;
-            font-weight: bold;
-            box-sizing: 100px;
-            width: 500px;
-            height: 50px;
-        }  
-        .epilogue h2{               /*fifthbackground p의 글씨체 조정*/
-            color: white;
-            background-color: black;
-            font-weight: bold;
-            box-sizing: 100px;
-            width: 460px;
-            height: 35px;
-            position: relative;
-            left: 750px;
-            top: 550px;
-        }       
-        .replace{           /*welcome의 위치 조정*/
-            position: relative;
-            top: 340px;
-            left: 788px;
         }
     </style>
 </head>
 <body>
-    <div id="firstbackground">
+    <div id="firstbackground" class="background">
+        <nav> 
+            <ul class="list">
+                <li>list 1</li>
+                <li>list 2</li>
+                <li>list 3</li>
+                <li>list 4</li>
+                <li>list 5</li>
+                <li>list 6</li>
+                <a href="login.html"><li>로그인 화면</li></a>
+            </ul>
+        </nav>
         <div class="title">
             <h1>Dream의 도서관에 오신것을 환영합니다.</h1> 
-            <p>이곳은 사용자의 기록물을 저장하는 도서관으로 영구히 보관합니다.
+            <p>이곳은 사용자의 일대기를 저장하는 도서관으로 영구히 보관합니다.
             <br>도서관에 대한 안내를 원하시면 입구(open)화면을 클릭해주세요.</p>         
             <a href="#secondbackground"> <img class="replace" src="images/welcome.png"/></a>           
         </div>
     </div>
-    <div id="secondbackground">
-        <div>
-            <p>이곳은 메인 서버입니다. 당신이 </p>
+    <div id="secondbackground" class="background">
+        <div class="second" >
+            <a href="#thirdbackground"><div class="look">구역 들어가기</div></a>
+            <h2>당신의 이야기는 이곳에 보관됩니다.</h2>
         </div>
     </div>
-    <div id="thirdbackground">
-        <div>
-
+    <div id="thirdbackground" class="background">
+        <div class="thrid">
+            <a href="#fourthbackground"><div class="look">책 대출해보기</div></a>
+            <h2>당신의 이야기는 사서들이 직접 관리하는 비밀스러운 칸에 보관됩니다.</h2>
+        </div> 
+    </div>
+    <div id="fourthbackground" class="background">
+        <div class="fourth">   
+            <a href="#fifthbackground"><div class="look" style="text-align: center;">탐방 종료</div></a>
+            <h2>당신의 이야기는 지정한 사람만 열람할 수 있습니다.</h2>
         </div>
     </div>
-    <div id="fourthbackground">
-        <div>   
-
-        </div>
-    </div>
-    <div id="fifthbackground">
+    <div id
+    ="fifthbackground" class="background">
         <div class="epilogue">
+            <div class="look" style="text-align: center;">등록하기</div>
             <h2>자, 이제 당신의 이야기를 들려주시겠어요?</h2>
         </div>
     </div>
