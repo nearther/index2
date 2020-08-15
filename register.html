@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        .background{                        /*배경화면*/
+            background-image: url('images/7.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script>
+        function checkNum(){
+        if(event.keyCode<48 || event.keyCode>57){
+        event.returnValue=false;
+      }
+    }
+    </script>
+</head>
+<body class="background">
+ 
+    <form name="write_form_member" method="post">
+      <h1 style="color: white; background-color:black; width: 140px; margin-left: 700px; margin-top: 50px; margin-top: 200px;">회원 가입</h1>
+        <table width="940" style="padding:5px 0 5px 0; margin-left: 400px;">
+           <tr height="2"><td colspan="2"></td></tr>
+           <tr>
+              <th> 이름</th>
+              <td><input type="text" name="mbname"></td>
+           </tr>
+            <tr>
+              <th>아이디</th>
+              <td>
+              <input type="text" name="id" ><span style="font-weight: bold; color: white; background-color:black;">영문/숫자포함 6자 이상</span>
+              </td>
+            </tr>
+            <tr>
+              <th>비밀번호</th>
+              <td><input type="password" name="passwd"><span style="font-weight: bold; color: white; background-color:black;">영문/숫자포함 6자 이상</span></td>
+            </tr>
+            <tr>
+              <th>비밀번호 확인</th>
+              <td><input type="password" name="check_passwd"></td>
+            </tr>
+             <tr>
+               <th>이메일</th>
+               <td>
+                 <input type='text' name="email">@
+                 <input type='text' name="email_address">
+                   <select name="check_email">
+                      <option value="">직접입력</option>
+                      <option value="naver.com">naver.com</option>
+                      <option value="daum.net">daum.net</option>
+                      <option value="empal.com">empal.com</option>
+                      <option value="gmail.com">gmail.com</option>
+                      <option value="hanmail.net">hanmail.net</option>
+                      <option value="msn.com">msn.com</option>
+                      <option value="nate.com">nate.com</option>
+                   </select>
+                 </td>
+              </tr>
+              <tr>
+                <th>주소</th>
+                <td>
+                  <input type="text" name="addres1"> - 
+                  <input type="text" name="addres2">
+                  <input type="text" name="addres3"><br>
+                  <input type="text" name="addres4">
+                </td>
+              </tr>
+             <tr>
+               <th>전화번호<small>(휴대폰 번호)</small></th>
+                <td>
+                  <input type="text" name="num1" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/> 
+                  <input type="text" name="num2" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"> -
+                  <input type="text" name="num3" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"> -
+                </td>
+               </tr>
+            <tr>
+              <th>메일/sns 정보 수신</th>
+                <td class="s">
+                    <input type="radio" name="respondEmail" checked> 수신
+                    <input type="radio" name="respondEmail" value="1"> 수신거부
+                 </td>
+              </tr>     
+              <tr>  
+                <th>정보공개여부</th>
+                <td>
+                <select name='yOrN' size='0'>
+                      <option value=''>선택하세요</option>
+                      <option value='2'>가족들에게만 공개</option>
+                      <option value='3'>지인들에게 공개</option>
+                      <option value='4'>모든 이들에게 공개</option>
+                      <option value='5'>공개하지 않음</option>
+                  </select>
+                 </td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="회원가입">
+                    <input type="reset" value="양식 다시 적기">
+                 </td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+    </form>
+</body>
+</html>
